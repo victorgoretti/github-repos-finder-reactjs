@@ -1,14 +1,21 @@
 import './App.css';
 import User from '../../Pages/User';
 import Home from '../../Pages/Home';
-import Navigation from '../Navigation';
+import { BrowserRouter } from 'react-router-dom';
+import NavigationBar from '../Navigation/NavigationBar';
+import CustomChangeRoute from '../Navigation/CustomChangeRoute';
 
 function App() {
   return (
     <>
-    <Navigation />
-    <Home />
+    {/* <NavigationBar /> */}
+    {/* <Home /> */}
     {/* <User /> */}
+    <BrowserRouter>
+      <NavigationBar />
+      <CustomChangeRoute />
+    </BrowserRouter>
+
     </>
     // <div className="App">
     //   <header className="App-header">

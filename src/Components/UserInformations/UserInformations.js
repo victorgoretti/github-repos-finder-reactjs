@@ -4,6 +4,7 @@ import RepositoriesAccordion from '../RepositoriesAccordion';
 
 
 const UserInformations = ({ username }) => {
+    
     return (
         <>
         <UserInformationsCard />

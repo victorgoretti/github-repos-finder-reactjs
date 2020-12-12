@@ -13,6 +13,7 @@ import FolderIcon from '@material-ui/icons/Folder';
 import './index.css';
 
 const UserInformationsCard = () => {
+    
     return (
         <Grid container className="container-informations-card" justify="center">
             <Grid item xs={4}>

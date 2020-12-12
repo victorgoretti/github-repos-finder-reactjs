@@ -8,7 +8,8 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import './index.css';
 
-const Navigation = () => {
+const NavigationBar = () => {
+    
     return (
         <div>
             <AppBar position="static">
@@ -39,4 +40,4 @@ const Navigation = () => {
     );
 }
 
-export default Navigation ;
+export default NavigationBar ;
