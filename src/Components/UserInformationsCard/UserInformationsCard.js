@@ -14,8 +14,8 @@ import './index.css';
 
 const UserInformationsCard = () => {
     return (
-        <Grid container justify="center">
-            <Grid item xs={4}>
+        <Grid container className="container-informations-card" justify="center">
+            <Grid item xs={5}>
                 <Card>
                     <CardHeader
                         className="name-user-title" 
@@ -77,8 +77,8 @@ const UserInformationsCard = () => {
                                 showLabels
                                 // className={classes.root}
                             >
-                                <BottomNavigationAction id="navegation-button-repositories" label="Repositories" icon={<FolderIcon />} />
-                                <BottomNavigationAction id="navegation-button-starred" label="Starred" icon={<StarIcon />} />
+                                <BottomNavigationAction id="navegation-button-repositories" label="Repositories" icon={<FolderIcon fontSize="large"/>} />
+                                <BottomNavigationAction id="navegation-button-starred" label="Starred" icon={<StarIcon fontSize="large"/>} />
                             </BottomNavigation>
                         </CardActions>
                     </Grid>
