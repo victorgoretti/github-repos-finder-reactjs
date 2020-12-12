@@ -15,7 +15,7 @@ import './index.css';
 const UserInformationsCard = () => {
     return (
         <Grid container className="container-informations-card" justify="center">
-            <Grid item xs={5}>
+            <Grid item xs={4}>
                 <Card>
                     <CardHeader
                         className="name-user-title" 

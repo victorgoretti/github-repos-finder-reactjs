@@ -12,7 +12,7 @@ const RepositoriesAccordion = () => {
 
   return (
     <Grid container justify="center" className="container-accordion-repositories">
-        <Grid item xs={5}>
+        <Grid item xs={4}>
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}

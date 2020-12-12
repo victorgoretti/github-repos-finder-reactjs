@@ -13,13 +13,14 @@ const Navigation = () => {
         <div>
             <AppBar position="static">
                 <Toolbar className="toolbar-navigation-github">
-                    <Grid container justify="center" xs={9} spacing={2}>
-                        <Grid item xs={4}/>
+                    <Grid container justify="center" xs={11} spacing={2}>
+                        <Grid item xs={2}/>
                         <Grid item xs={3}>
                             <Typography variant="h6" noWrap>
                                 GitHub Finder
                             </Typography>
                         </Grid>
+                        <Grid item xs={1}/>
                         <Grid item xs={2}>
                             <div className="div-search-user">
                                 <InputBase
