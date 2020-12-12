@@ -1,9 +1,15 @@
 import './App.css';
-import User from '../../Pages/User/index';
+import User from '../../Pages/User';
+import Home from '../../Pages/Home';
+import Navigation from '../Navigation';
 
 function App() {
   return (
-    <User />
+    <>
+    <Navigation />
+    <Home />
+    {/* <User /> */}
+    </>
     // <div className="App">
     //   <header className="App-header">
     //     <p>
