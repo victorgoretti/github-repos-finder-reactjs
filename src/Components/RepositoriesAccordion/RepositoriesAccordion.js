@@ -13,7 +13,6 @@ import './index.css';
 const RepositoriesAccordion = ( {repositories} ) => {
     const repositoriesList = repositories?.map((repository) => {
         const {
-            id,
             name,
             description,
             forks,

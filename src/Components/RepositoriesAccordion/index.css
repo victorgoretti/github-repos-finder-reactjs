@@ -1,3 +1,11 @@
 .container-accordion-repositories div.MuiAccordionDetails-root {
     padding: 0px;
 }
+
+.container-accordion-repositories p.MuiTypography-root.MuiTypography-body1 {
+    font-weight: 700;
+}
+
+.container-accordion-repositories div.MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded {
+    color: #35a7b6;
+}

@@ -56,12 +56,21 @@ const UserInformationsCard = ( {
                         className="name-user-title" 
                         title={`${name} (${login})`}
                         titleTypographyProps={{ variant: "h5", component: "span" }}
+                        subheader={
+                            <a 
+                                href={htmlUrl} 
+                                target="_blank" 
+                                rel="noreferrer"
+                            >
+                                {htmlUrl}
+                                <HiOutlineExternalLink />
+                            </a>
+                        }
                         avatar={
-                            <Avatar aria-label="recipe">
-                                R
-                            </Avatar>
+                            <Avatar id="avatar-user" src={`${avatarUrl}`} />
                         }
                     />
+
                     <CardContent>
                         <strong>Bio: </strong>
                         {(bio && <blockquote>{bio}</blockquote>) || '-'}

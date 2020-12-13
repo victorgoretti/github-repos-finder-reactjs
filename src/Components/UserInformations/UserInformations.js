@@ -9,19 +9,32 @@ import StarredRepositoriesUserGitHubService from '../../Services/StarredReposito
 import Grid from '@material-ui/core/Grid';
 
 const RepositoryTitle = (props) => {
-    const { userName, hasUserRepositories, hasStarredRepositories, repositories } = props;
+    const { 
+        userName, 
+        hasUserRepositories, 
+        hasStarredRepositories, 
+        repositories, 
+        showErrorRepositories 
+    } = props;
 
     const repositoryAccordionTitle = hasUserRepositories
-        ? `'${userName}' public repositories.`
+        ? `(${userName}) public repositories.`
         : null;
     const starredRepositoryAccordionTitle = hasStarredRepositories
-        ? `'${userName}' repositories order by starred.`
+        ? `(${userName}) repositories order by starred.`
         : null;
 
     if (repositories.length > 0) {
-        return <h5>{repositoryAccordionTitle || starredRepositoryAccordionTitle}</h5>;
+        return (
+            <Grid container justify="center">
+                <h4>
+                    {repositoryAccordionTitle || starredRepositoryAccordionTitle}
+                </h4>
+            </Grid>   
+        );
     }
-    if (userName && (!hasUserRepositories || !hasStarredRepositories)) {
+    if (userName && showErrorRepositories 
+        && (!hasUserRepositories || !hasStarredRepositories)) {
         return (
             <Grid container justify="center" className="error-message">
                 {NO_REPOSITORY_FOUND}
@@ -34,6 +47,7 @@ const RepositoryTitle = (props) => {
 const UserInformations = ({ userName }) => {
     const [user, setUser] = useState({});
     const [repositories, setRepositories] = useState([]);
+    const [showErrorRepositories, setShowErrorRepositories] = useState(false);
     const [hasUserRepositories, setHasUserRepositories] = useState(false);
     const [hasStarredRepositories, setHasStarredRepositories] = useState(false);
 
@@ -42,6 +56,7 @@ const UserInformations = ({ userName }) => {
         setRepositories([]);
         setHasUserRepositories(false);
         setHasStarredRepositories(false);
+        setShowErrorRepositories(false);
     }, [userName]);
 
     useEffect(() => {
@@ -53,6 +68,7 @@ const UserInformations = ({ userName }) => {
             .getPublicRepositoriesUserGitHubByUserName(userName));
         setHasUserRepositories(true);
         setHasStarredRepositories(false);
+        setShowErrorRepositories(true);
     };
 
     const handleShowStarredRepositories = async () => {
@@ -60,6 +76,7 @@ const UserInformations = ({ userName }) => {
             .getStarredRepositoriesUserGitHubByUserName(userName));
         setHasUserRepositories(false);
         setHasStarredRepositories(true);
+        setShowErrorRepositories(true);
     };
 
     return (
@@ -76,6 +93,7 @@ const UserInformations = ({ userName }) => {
             hasUserRepositories={hasUserRepositories}
             hasStarredRepositories={hasStarredRepositories}
             repositories={repositories}
+            showErrorRepositories={showErrorRepositories}
         />
 
         <RepositoriesAccordion 

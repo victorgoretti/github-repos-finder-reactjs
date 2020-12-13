@@ -6,10 +6,23 @@
     color: #35a7b6;
 }
 
-#navegation-button-repositories:hover{
+#navegation-button-repositories:hover {
     color: #35a7b6;
 }
 
-#navegation-button-starred:hover{
+#navegation-button-repositories:focus {
     color: #35a7b6;
+}
+
+#navegation-button-starred:hover {
+    color: #35a7b6;
+}
+
+#navegation-button-starred:focus {
+    color: #35a7b6;
+}
+
+#avatar-user {
+    height: 65px;
+    width: 65px;
 }
