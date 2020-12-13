@@ -23,6 +23,10 @@ const Home = () => (
                 Type the username of GitHub in the search field and than click in the search
                 button.
             </p>
+            <p>
+                <strong>Developed by: </strong>
+                Victor Goretti
+            </p>
         </section>
     </Grid>
 );

@@ -15,7 +15,7 @@ import FolderIcon from '@material-ui/icons/Folder';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import './index.css';
 
-const UserInformationsCard = ( {
+const UserInformationsCard = ({
     userName,
     user: {
         login,
@@ -37,7 +37,7 @@ const UserInformationsCard = ( {
     },
     onClickShowUserPublicRepositories,
     onClickShowStarredRepositories
- } ) => {
+ }) => {
     const dateOfCreation = new Date(createdAt);
     const dateOfUptade = new Date(updatedAt);
     
