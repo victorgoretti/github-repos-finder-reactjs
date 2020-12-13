@@ -28,7 +28,7 @@ const UserInformationsCard = ( {
         email,
         hireable,
         bio,
-        twitterUsername,
+        twitterUserName,
         publicRepos,
         followers,
         following,
@@ -93,7 +93,7 @@ const UserInformationsCard = ( {
                         {hireable || '-'}
                         <br />
                         <strong>Twitter Username: </strong>
-                        {twitterUsername || '-'}
+                        {twitterUserName || '-'}
                         <br />
                         <strong>Public Repos: </strong>
                         {(

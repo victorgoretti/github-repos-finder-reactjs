@@ -1,11 +1,11 @@
-export const PROJECT_NAME = 'Github Finder';
+export const PROJECT_NAME = "Github Finder";
 
-export const GITHUB_API_URL = 'https://api.github.com';
+export const URL_API_GITHUB = "https://api.github.com";
 
-export const APPLICATION_ERROR = 'Application error.';
+export const APPLICATION_ERROR = "Application error.";
 
 export const NO_REPOSITORY_FOUND =
-    'No repository found.';
+    "No repository found.";
 
 export const NO_USER_FOUND = (userName) =>
     `Username: (${userName}) does not exist. Please, try another.`;

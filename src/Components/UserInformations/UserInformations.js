@@ -3,6 +3,9 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { NO_REPOSITORY_FOUND } from '../../Config/constants';
 import UserInformationsCard from '../UserInformationsCard';
 import RepositoriesAccordion from '../RepositoriesAccordion';
+import UserGitHubService from '../../Services/UserGitHubService';
+import PublicRepositoriesUserGitHubService from '../../Services/PublicRepositoriesUserGitHubService';
+import StarredRepositoriesUserGitHubService from '../../Services/StarredRepositoriesUserGitHubService';
 import Grid from '@material-ui/core/Grid';
 
 const RepositoryTitle = (props) => {
@@ -35,7 +38,7 @@ const UserInformations = ({ userName }) => {
     const [hasStarredRepositories, setHasStarredRepositories] = useState(false);
 
     const memoizedFunction = useCallback(async () => {
-        // setUser(await githubUserService.getByUsername(userName));
+        setUser(await UserGitHubService.getUserGitHubByUserName(userName));
         setRepositories([]);
         setHasUserRepositories(false);
         setHasStarredRepositories(false);
@@ -46,13 +49,15 @@ const UserInformations = ({ userName }) => {
     }, [memoizedFunction]);
 
     const handleShowUserPublicRepositories = async () => {
-        // setRepositories(await githubUserReposService.getByUsername(userName));
+        setRepositories(await PublicRepositoriesUserGitHubService
+            .getPublicRepositoriesUserGitHubByUserName(userName));
         setHasUserRepositories(true);
         setHasStarredRepositories(false);
     };
 
     const handleShowStarredRepositories = async () => {
-        // setRepositories(await githubStarredReposService.getByUsername(userName));
+        setRepositories(await StarredRepositoriesUserGitHubService
+            .getStarredRepositoriesUserGitHubByUserName(userName));
         setHasUserRepositories(false);
         setHasStarredRepositories(true);
     };
