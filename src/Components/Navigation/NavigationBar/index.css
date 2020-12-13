@@ -19,3 +19,8 @@
     color: #ffffff !important;
     padding: 5px !important;
 }
+
+.link-home-page {
+    text-decoration: none;
+    color: #ffffff;
+}

@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import { useHistory } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
 import './index.css';
 
 const NavigationBar = () => {
@@ -29,9 +29,11 @@ const NavigationBar = () => {
                     <Grid container justify="center" xs={11} spacing={2}>
                         <Grid item xs={2}/>
                         <Grid item xs={3}>
-                            <Typography variant="h6" noWrap>
-                                GitHub Finder
-                            </Typography>
+                            <NavLink className="link-home-page" to="/">
+                                <Typography variant="h6" noWrap>
+                                    GitHub Finder
+                                </Typography>
+                            </NavLink>
                         </Grid>
                         <Grid item xs={1}/>
                         <Grid item xs={2}>
