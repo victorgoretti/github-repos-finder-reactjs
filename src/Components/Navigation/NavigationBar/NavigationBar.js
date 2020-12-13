@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,9 +7,20 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
+import { useHistory } from 'react-router-dom';
 import './index.css';
 
 const NavigationBar = () => {
+    const history = useHistory();
+    const [userName, setUserName] = useState('');
+
+    const onChangeUserName = (e) => {
+        setUserName(e.target.value);
+    };
+
+    const onClickSearchUser = () => {
+        history.push(userName);
+    };
     
     return (
         <div>
@@ -28,11 +39,14 @@ const NavigationBar = () => {
                                 <InputBase
                                     className="search-user"
                                     placeholder="User…"
+                                    onChange={onChangeUserName}
                                 />
                                 <IconButton 
                                     className="button-search-user" 
                                     type="submit" 
                                     aria-label="search"
+                                    disabled={!userName}
+                                    onClick={onClickSearchUser}
                                 >
                                     <SearchIcon />
                                 </IconButton>
