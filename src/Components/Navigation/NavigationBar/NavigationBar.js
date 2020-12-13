@@ -42,10 +42,10 @@ const NavigationBar = () => {
                                     className="search-user"
                                     placeholder="User…"
                                     onChange={onChangeUserName}
+                                    onKeyPress={(e) => ((e.key === 'Enter' && userName) ? onClickSearchUser() : null)}
                                 />
                                 <IconButton 
                                     className="button-search-user" 
-                                    type="submit" 
                                     aria-label="search"
                                     disabled={!userName}
                                     onClick={onClickSearchUser}
