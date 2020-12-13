@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
@@ -28,7 +29,11 @@ const NavigationBar = () => {
                                     className="search-user"
                                     placeholder="User…"
                                 />
-                                <IconButton className="button-search-user" type="submit" aria-label="search">
+                                <IconButton 
+                                    className="button-search-user" 
+                                    type="submit" 
+                                    aria-label="search"
+                                >
                                     <SearchIcon />
                                 </IconButton>
                             </div>
