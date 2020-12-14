@@ -1,0 +1,20 @@
+{
+    "id": 1,
+    "login": "login",
+    "name": "name",
+    "company": "company",
+    "blog": "blog",
+    "location": "location",
+    "email": "email",
+    "hireable": "hireable",
+    "bio": "bio",
+    "followers": "followers",
+    "following": "following",
+    "avatarUrl": "http://avatar.url",
+    "htmlUrl": "http://html.url",
+    "twitterUserName": "twitter_username",
+    "publicRepos": 1,
+    "publicGists": 1,
+    "createdAt": "Tue, 09 Apr 2019 18:03:19 GMT",
+    "updatedAt": "Sun, 13 Dec 2020 05:51:50 GMT"
+}

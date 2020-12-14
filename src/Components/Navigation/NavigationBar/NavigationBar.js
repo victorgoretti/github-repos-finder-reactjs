@@ -26,8 +26,8 @@ const NavigationBar = () => {
         <div>
             <AppBar position="static">
                 <Toolbar className="toolbar-navigation-github">
-                    <Grid container justify="center" xs={11} spacing={2}>
-                        <Grid item xs={2}/>
+                    <Grid container justify="center" spacing={0}>
+                        <Grid item xs={1}/>
                         <Grid item xs={3}>
                             <NavLink className="link-home-page" to="/">
                                 <Typography variant="h6" noWrap>

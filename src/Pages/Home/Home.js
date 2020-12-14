@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import './index.css';
 
 const Home = () => (
-    <Grid container xs={12} justify="center" className="container-home-page">
+    <Grid container justify="center" className="container-home-page">
         <section>
             <header>
                 <h2>Project:</h2>
