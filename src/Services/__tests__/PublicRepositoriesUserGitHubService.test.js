@@ -20,11 +20,11 @@ describe("Services/PublicRepositoriesUserGitHubService", () => {
 
     describe("Error: call getPublicRepositoriesUserGitHubByUserName and return public repositories - 404", () => {
         it("error: call getPublicRepositoriesUserGitHubByUserName and return public repositories - 404", async () => {
-            MockAxios.get.mockImplementationOnce(() => 
-                Promise.resolve({})
-            );
+            const error = console.error;
+            console.error = () => {};
             const publicRepositories = await PublicRepositoriesUserGitHubService.getPublicRepositoriesUserGitHubByUserName("noOne");
-            expect(publicRepositories).toEqual([]);
+            expect(publicRepositories).toEqual({repositories:[], status:404});
+            console.error = error;
         });
     });
 });

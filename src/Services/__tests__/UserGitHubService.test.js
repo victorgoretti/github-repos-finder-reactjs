@@ -20,11 +20,11 @@ describe("Services/UserGitHubService", () => {
 
     describe("Error: call getUserGitHubByUserName and return user informations - 404", () => {
         it("error: call getUserGitHubByUserName and return user informations - 404", async () => {
-            MockAxios.get.mockImplementationOnce(() => 
-                Promise.resolve({})
-            );
+            const error = console.error;
+            console.error = () => {};
             const userInformations = await UserGitHubService.getUserGitHubByUserName("noOne");
-            expect(userInformations).toEqual({});
+            expect(userInformations).toEqual({user:{}, status:404});
+            console.error = error;
         });
     });
 });

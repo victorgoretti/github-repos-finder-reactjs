@@ -20,11 +20,11 @@ describe("Services/StarredRepositoriesUserGitHubService", () => {
 
     describe("Error: call getStarredRepositoriesUserGitHubByUserName and return starred repositories - 404", () => {
         it("error: call getStarredRepositoriesUserGitHubByUserName and return starred repositories - 404", async () => {
-            MockAxios.get.mockImplementationOnce(() => 
-                Promise.resolve({})
-            );
+            const error = console.error;
+            console.error = () => {};
             const starredRepositories = await StarredRepositoriesUserGitHubService.getStarredRepositoriesUserGitHubByUserName("noOne");
-            expect(starredRepositories).toEqual([]);
+            expect(starredRepositories).toEqual({repositories:[], status:404});
+            console.error = error;
         });
     });
 });
