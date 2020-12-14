@@ -21,7 +21,7 @@ const RepositoryTitle = (props) => {
         ? `(${userName}) public repositories.`
         : null;
     const starredRepositoryAccordionTitle = hasStarredRepositories
-        ? `(${userName}) repositories order by starred.`
+        ? `(${userName}) starred repositories.`
         : null;
 
     if (repositories.length > 0) {
