@@ -6,7 +6,7 @@ import { URL_API_GITHUB, NO_REPOSITORY_FOUND } from '../Config/constants';
 const getStarredRepositoriesUserGitHubByUserName = async (userName) => {
     try {
         const repositories = await axios
-        .get(`${URL_API_GITHUB}/users/${userName}/starred`)
+            .get(`${URL_API_GITHUB}/users/${userName}/starred`)
             .then((response) => response.data)
         return standardizeRepositoryFields(repositories);
     } catch (error) {

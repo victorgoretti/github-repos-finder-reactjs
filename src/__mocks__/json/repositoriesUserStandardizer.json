@@ -20,7 +20,8 @@
             "publicRepos": 1,
             "publicGists": 1,
             "createdAt": "Tue, 09 Apr 2019 18:03:19 GMT",
-            "updatedAt": "Sun, 13 Dec 2020 05:51:50 GMT"
+            "updatedAt": "Sun, 13 Dec 2020 05:51:50 GMT",
+            "status": 200
         },
         "description": "description",
         "htmlUrl": "https://html1.url",
@@ -32,6 +33,7 @@
         "openIssuesCount": 1,
         "createdAt": "Tue, 09 Apr 2019 18:03:19 GMT",
         "updatedAt": "Sun, 13 Dec 2020 05:51:50 GMT",
-        "pushedAt": "Sun, 13 Dec 2020 05:51:50 GMT"
+        "pushedAt": "Sun, 13 Dec 2020 05:51:50 GMT",
+        "status": 200
     }
 ]

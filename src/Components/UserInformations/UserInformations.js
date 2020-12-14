@@ -53,7 +53,6 @@ const UserInformations = ({ userName }) => {
 
     const memoizedFunction = useCallback(async () => {
         setUser(await UserGitHubService.getUserGitHubByUserName(userName));
-        console.log(await UserGitHubService.getUserGitHubByUserName(userName))
         setRepositories([]);
         setHasUserRepositories(false);
         setHasStarredRepositories(false);

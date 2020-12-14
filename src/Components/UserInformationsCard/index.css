@@ -26,3 +26,11 @@
     height: 65px;
     width: 65px;
 }
+
+#loader-page-user-informations {
+    color:  #35a7b6;
+}
+
+.container-loader-page-user-informations {
+    margin-top: 15px;
+}
