@@ -21,6 +21,7 @@ export const standardizeUserInformationsFields = (user) => {
         publicGists: user?.public_gists,
         createdAt: user?.created_at,
         updatedAt: user?.updated_at,
+        status: 200
     };
 };
 
@@ -44,6 +45,7 @@ export const standardizeRepositoryFields = (repositories) => {
         createdAt: repository.created_at,
         updatedAt: repository.updated_at,
         pushedAt: repository.pushed_at,
+        status: 200
     }));
 };
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { standardizeRepositoryFields } from '../Utils/standardizer'
-import { URL_API_GITHUB, NO_USER_FOUND } from '../Config/constants';
+import { URL_API_GITHUB, NO_REPOSITORY_FOUND } from '../Config/constants';
 
 const getStarredRepositoriesUserGitHubByUserName = async (userName) => {
     try {
@@ -10,9 +10,9 @@ const getStarredRepositoriesUserGitHubByUserName = async (userName) => {
             .then((response) => response.data)
         return standardizeRepositoryFields(repositories);
     } catch (error) {
-        console.error(NO_USER_FOUND(userName));
+        console.error(NO_REPOSITORY_FOUND);
     }
-    return [];
+    return {repositories:[], status:404};
 };
 
 const StarredRepositoriesUserGitHubService = {

@@ -12,7 +12,7 @@ const getUserGitHubByUserName = async (userName) => {
     } catch (error) {
         console.error(NO_USER_FOUND(userName));
     }
-    return NO_USER_FOUND(userName);
+    return {user:{}, status:404};
 };
 
 const UserGitHubService = {
